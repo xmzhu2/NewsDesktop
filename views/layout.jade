@@ -1,0 +1,23 @@
+doctype 5
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel="stylesheet", type="text/css", href="/ext4/resources/css/ext-all.css" )
+    link(rel="stylesheet",type="text/css", href="/desktop/css/desktop.css" )
+    script(type="text/javascript", src="/ext4/ext-all-debug.js")
+    script
+     Ext.Loader.setPath({
+                'Ext.ux.desktop': '/desktop/js',
+                 MyDesktop: '/desktop'
+            });
+
+            Ext.require('MyDesktop.App');
+
+            var myDesktopApp;
+            Ext.onReady(function () {
+                myDesktopApp = new MyDesktop.App();
+           });
+
+  body
+    block content

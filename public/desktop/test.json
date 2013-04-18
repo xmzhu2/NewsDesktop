@@ -1,0 +1,5 @@
+{width: 840,height: 480,
+    centerInWindow: true,
+    resizable: true,
+    title: "{0}",
+    onInit: function(){var baseUrl = this.app.getBaseUrl();this.attr("iframeUrl", baseUrl + "desktop/initMainPage.do?menuId={1}");}}
