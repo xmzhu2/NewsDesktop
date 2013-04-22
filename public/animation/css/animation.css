@@ -1,0 +1,9 @@
+.shake_base {
+    position:absolute;
+}
+.shake_big {
+    font-size:180%;
+}
+.shake_click {
+    cursor: pointer;
+}

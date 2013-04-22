@@ -1,0 +1,11 @@
+{
+  "name": "Desktop",
+  "description": "",
+  "version": "0.1",
+  "options": {
+    "paths": [
+      "./public/animation"
+    ],
+    "outdir": "./api"
+  }
+}

@@ -1,0 +1,265 @@
+{
+    "project": {
+        "name": "Desktop",
+        "description": "",
+        "version": "0.1"
+    },
+    "files": {
+        "public/animation/base/BaseAnimation.js": {
+            "name": "public/animation/base/BaseAnimation.js",
+            "modules": {
+                "animation 动画模块": 1
+            },
+            "classes": {
+                "Desktop.animation.BaseAnimation": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "Desktop.animation": 1
+            }
+        },
+        "public/animation/base/ShakeAnimation.js": {
+            "name": "public/animation/base/ShakeAnimation.js",
+            "modules": {},
+            "classes": {
+                "Desktop.animation.ShakeAnimation": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "Desktop.animation": 1
+            }
+        }
+    },
+    "modules": {
+        "animation 动画模块": {
+            "name": "animation 动画模块",
+            "submodules": {},
+            "classes": {
+                "Desktop.animation.BaseAnimation": 1,
+                "Desktop.animation.ShakeAnimation": 1
+            },
+            "fors": {},
+            "namespaces": {
+                "Desktop.animation": 1
+            },
+            "tag": "module",
+            "file": "public/animation/base/ShakeAnimation.js",
+            "line": 10,
+            "description": "基础动画类<br/>\n为了其他动画类提供基础方法，对dom操作的简单封装"
+        }
+    },
+    "classes": {
+        "Desktop.animation.BaseAnimation": {
+            "name": "Desktop.animation.BaseAnimation",
+            "shortname": "Desktop.animation.BaseAnimation",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "animation 动画模块",
+            "namespace": "Desktop.animation",
+            "file": "public/animation/base/BaseAnimation.js",
+            "line": 10,
+            "description": "基础动画类<br/>\n为了其他动画类提供基础方法，对dom操作的简单封装"
+        },
+        "Desktop.animation.ShakeAnimation": {
+            "name": "Desktop.animation.ShakeAnimation",
+            "shortname": "Desktop.animation.ShakeAnimation",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "animation 动画模块",
+            "namespace": "Desktop.animation",
+            "file": "public/animation/base/ShakeAnimation.js",
+            "line": 10,
+            "description": "抖动动画类<br/>\n 提供抖动动画效果，可以对指定的dom(下一个版本可能对指定的panel等做操作)",
+            "extends": "Desktop.animation.BaseAnimation"
+        }
+    },
+    "classitems": [
+        {
+            "file": "public/animation/base/BaseAnimation.js",
+            "line": 1,
+            "description": "Created with JetBrains WebStorm.\nUser: rongwang\nDate: 13-4-18\nTime: 上午11:59\nTo change this template use File | Settings | File Templates.",
+            "class": "Desktop.animation.BaseAnimation"
+        },
+        {
+            "file": "public/animation/base/ShakeAnimation.js",
+            "line": 1,
+            "description": "Created with JetBrains WebStorm.\nUser: rongwang\nDate: 13-4-18\nTime: 下午12:01\nTo change this template use File | Settings | File Templates.",
+            "class": "Desktop.animation.ShakeAnimation",
+            "module": "animation 动画模块",
+            "namespace": "Desktop.animation"
+        },
+        {
+            "file": "public/animation/base/ShakeAnimation.js",
+            "line": 30,
+            "description": "抖动方法",
+            "itemtype": "method",
+            "name": "shake",
+            "static": 1,
+            "params": [
+                {
+                    "name": "dom",
+                    "description": "需要抖动的dom"
+                },
+                {
+                    "name": "config",
+                    "description": "抖动参数"
+                }
+            ],
+            "class": "Desktop.animation.ShakeAnimation",
+            "module": "animation 动画模块"
+        },
+        {
+            "file": "public/animation/base/ShakeAnimation.js",
+            "line": 62,
+            "description": "上下(纵向)抖动方法",
+            "static": 1,
+            "itemtype": "method",
+            "name": "shakeH",
+            "params": [
+                {
+                    "name": "dom",
+                    "description": "抖动的dom"
+                }
+            ],
+            "class": "Desktop.animation.ShakeAnimation",
+            "module": "animation 动画模块"
+        },
+        {
+            "file": "public/animation/base/ShakeAnimation.js",
+            "line": 72,
+            "description": "左右(水平)抖动方法",
+            "static": 1,
+            "itemtype": "method",
+            "name": "shakeV",
+            "params": [
+                {
+                    "name": "dom",
+                    "description": "抖动的dom"
+                }
+            ],
+            "class": "Desktop.animation.ShakeAnimation",
+            "module": "animation 动画模块"
+        },
+        {
+            "file": "public/animation/base/ShakeAnimation.js",
+            "line": 82,
+            "description": "通过配置，生成当前抖动的样式，比如 滚动过程中加粗，滚动过程中变色，等等",
+            "static": 1,
+            "params": [
+                {
+                    "name": "el",
+                    "description": "抖动dom封装好的el"
+                },
+                {
+                    "name": "config",
+                    "description": "抖动参数"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Function"
+            },
+            "class": "Desktop.animation.ShakeAnimation",
+            "module": "animation 动画模块"
+        },
+        {
+            "file": "public/animation/base/ShakeAnimation.js",
+            "line": 103,
+            "description": "返回随机抖动的参数对象",
+            "access": "protected",
+            "tagname": "",
+            "params": [
+                {
+                    "name": "el",
+                    "description": "抖动dom封装好的el"
+                },
+                {
+                    "name": "config",
+                    "description": "抖动参数"
+                }
+            ],
+            "return": {
+                "description": "生成的 随机抖动参数{keyFrames:{'这是过程'},callback:{\"这是回调\"}}",
+                "type": "*"
+            },
+            "class": "Desktop.animation.ShakeAnimation",
+            "module": "animation 动画模块"
+        },
+        {
+            "file": "public/animation/base/ShakeAnimation.js",
+            "line": 129,
+            "itemtype": "method",
+            "name": "smoothShake",
+            "params": [
+                {
+                    "name": "dom",
+                    "description": "抖动dom"
+                },
+                {
+                    "name": "config",
+                    "description": "抖动参数"
+                }
+            ],
+            "class": "Desktop.animation.ShakeAnimation",
+            "module": "animation 动画模块"
+        },
+        {
+            "file": "public/animation/base/ShakeAnimation.js",
+            "line": 158,
+            "class": "Desktop.animation.ShakeAnimation",
+            "module": "animation 动画模块"
+        },
+        {
+            "file": "public/animation/base/ShakeAnimation.js",
+            "line": 159,
+            "params": [
+                {
+                    "name": "dom",
+                    "description": ""
+                },
+                {
+                    "name": "config",
+                    "description": ""
+                },
+                {
+                    "name": "callback",
+                    "description": ""
+                }
+            ],
+            "class": "Desktop.animation.ShakeAnimation",
+            "module": "animation 动画模块"
+        }
+    ],
+    "warnings": [
+        {
+            "message": "Missing item type\nCreated with JetBrains WebStorm.\nUser: rongwang\nDate: 13-4-18\nTime: 上午11:59\nTo change this template use File | Settings | File Templates.",
+            "line": " public/animation/base/BaseAnimation.js:1"
+        },
+        {
+            "message": "Missing item type\nCreated with JetBrains WebStorm.\nUser: rongwang\nDate: 13-4-18\nTime: 下午12:01\nTo change this template use File | Settings | File Templates.",
+            "line": " public/animation/base/ShakeAnimation.js:1"
+        },
+        {
+            "message": "Missing item type\n通过配置，生成当前抖动的样式，比如 滚动过程中加粗，滚动过程中变色，等等",
+            "line": " public/animation/base/ShakeAnimation.js:82"
+        },
+        {
+            "message": "Missing item type\n返回随机抖动的参数对象",
+            "line": " public/animation/base/ShakeAnimation.js:103"
+        },
+        {
+            "message": "Missing item type",
+            "line": " public/animation/base/ShakeAnimation.js:158"
+        },
+        {
+            "message": "Missing item type",
+            "line": " public/animation/base/ShakeAnimation.js:159"
+        }
+    ]
+}

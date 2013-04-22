@@ -5,19 +5,31 @@ html
     link(rel='stylesheet', href='/stylesheets/style.css')
     link(rel="stylesheet", type="text/css", href="/ext4/resources/css/ext-all.css" )
     link(rel="stylesheet",type="text/css", href="/desktop/css/desktop.css" )
+    link(rel="stylesheet",type="text/css", href="/animation/css/animation.css" )
     script(type="text/javascript", src="/ext4/ext-all-debug.js")
     script
      Ext.Loader.setPath({
                 'Ext.ux.desktop': '/desktop/js',
-                 MyDesktop: '/desktop'
+                 MyDesktop: '/desktop',
+                'Desktop.animation':'/animation/base'
             });
 
-            Ext.require('MyDesktop.App');
+            Ext.require('Desktop.animation.ShakeAnimation');
 
             var myDesktopApp;
             Ext.onReady(function () {
-                myDesktopApp = new MyDesktop.App();
-           });
+                var window = Ext.create('Ext.panel.Panel',{
+                  title: 'Hello',
+                  width: 200,
+                  height:200,
+                  html: '<p>World!</p>',
+                  renderTo: 'test1'
+                });
+              //  Desktop.animation.ShakeAnimation.shake('test',function(){alert(1)});
+                Desktop.animation.ShakeAnimation.shakeOnClick('test1',{time:1000,bigMore:true});
+            });
 
   body
+    #test(style='position:absolute;left:200px;top:200px')
+    #test1(style='position:absolute;left:300px;top:300px')  test1
     block content
